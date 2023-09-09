@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" onclick="alert('html')">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onclick="alert('body')">
+    <div onclick="alert('div')">
+      div
+      <p
+        onclick="(function name(e) {
+            e.stopPropagation();
+            alert('p')
+        })(e)"
+      >
+        para
+        <span onclick="alert('span')">span</span>
+      </p>
+    </div>
+  </body>
+</html>

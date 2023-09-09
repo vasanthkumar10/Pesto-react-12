@@ -7,3 +7,6 @@ export function Welcome(props) {
     </h1>
   );
 }
+
+// HOOK -> a simple function with html content(functional component)
+// fn alone -> a hook

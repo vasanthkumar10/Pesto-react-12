@@ -6,6 +6,7 @@ export class Counter extends Component {
     console.log("constructor");
     this.state = {
       count: 0,
+      age: 10,
     };
 
     // this.handleIncrement = this.handleIncrement.bind(this);
@@ -30,9 +31,14 @@ export class Counter extends Component {
 
   handleIncrement = () => {
     // setState -> update the state and re-render(trigger update phase of react) the UI
-    this.setState({
-      count: this.state.count + 1,
-    });
+    this.setState(
+      {
+        count: this.state.count + 1,
+      },
+      () => {
+        console.log(this);
+      }
+    );
     console.log("state", this.state.count);
   };
 
@@ -46,8 +52,9 @@ export class Counter extends Component {
     console.log("render");
     return (
       <div>
+        <h2>age - {this.state.age}</h2>
         <h1>Class counter - {this.state.count}</h1>
-        <button onClick={this.handleIncrement}>increment</button>
+        <button onClick={() => this.handleIncrement(5)}>increment</button>
         <button onClick={this.handleDecrement}>decrement</button>
       </div>
     );
