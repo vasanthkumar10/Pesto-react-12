@@ -1,0 +1,16 @@
+.button {
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.button-light {
+  color: black;
+  background-color: #ebf2f2;
+}
+
+.button-dark {
+  color: white;
+  background-color: black;
+}

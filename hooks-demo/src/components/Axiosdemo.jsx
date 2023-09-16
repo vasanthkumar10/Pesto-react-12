@@ -2,7 +2,7 @@ import React from "react";
 import { useAxios } from "../hooks/useAxios";
 
 export function Axiosdemo() {
-  const [isLoading, apiData, error] = useAxios(
+  const { isLoading, apiData, error } = useAxios(
     "https://jsonplaceholder.typicode.com/posts/1"
   );
 

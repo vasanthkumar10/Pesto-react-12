@@ -5,6 +5,8 @@ import { BorderWrapper } from "./components/BorderWrapper";
 import { Counter } from "./components/Counter";
 import { Counter2 } from "./components/Counter2";
 import { Axiosdemo } from "./components/Axiosdemo";
+import { FocusInput } from "./components/FocusInput";
+import { ScrollDemo } from "./components/ScrollDemo";
 
 // global
 export const CartContext = createContext();
@@ -40,7 +42,9 @@ function App() {
 
         {/* <Counter />
         <Counter2 /> */}
-        <Axiosdemo />
+        {/* <Axiosdemo /> */}
+        {/* <FocusInput /> */}
+        <ScrollDemo />
       </div>
     </CartContext.Provider>
   );

@@ -23,5 +23,5 @@ export function useAxios(url) {
     fetchData();
   }, [url]);
 
-  return [isLoading, apiData, error];
+  return { isLoading, apiData, error };
 }

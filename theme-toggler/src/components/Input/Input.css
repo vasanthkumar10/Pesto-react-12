@@ -1,0 +1,26 @@
+.input-light {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  width: 20rem;
+  border: 2px solid black;
+  outline: none;
+}
+
+.input-dark {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  width: 20rem;
+  border: 2px solid white;
+  outline: none;
+  color: red;
+}
+
+.label-light {
+  color: black;
+}
+
+.label-dark {
+  color: white;
+}
