@@ -166,13 +166,22 @@ console.log('initial state', store.getState());
 // const unsubscribe = store.subscribe(() => console.log('store changed', store.getState()))
 
 // action gets dispatched
-store.dispatch(buyCar())
-store.dispatch(buyCar())
-store.dispatch(addCar(2))
-store.dispatch(addCar(10))
-store.dispatch(buyBike())
-store.dispatch(addBike(10))
-store.dispatch(makePayment(100))
+store.dispatch({
+    type: BUY_CAR, 
+    payload: {
+        quantity: 1,
+        model: 'maruti baleno',
+        year: 2023,
+        type: 'VXI automatic transmission'
+    }
+})
+
+// store.dispatch(buyCar())
+// store.dispatch(addCar(2))
+// store.dispatch(addCar(10))
+// store.dispatch(buyBike())
+// store.dispatch(addBike(10))
+// store.dispatch(makePayment(100))
 
 // unsubscribe()
 // console.log('Unsubscribed.....');
