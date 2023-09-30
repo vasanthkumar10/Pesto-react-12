@@ -1,7 +1,9 @@
 import axios from "axios";
 
-const URL = "https://hotels-api-4ltr.onrender.com/api/hotels";
+const BASE_URL = "https://hotels-api-4ltr.onrender.com/api";
 
-const getHotels = () => axios.get(URL);
+const getHotels = () => axios.get(`${BASE_URL}/hotels`);
 
-export { getHotels };
+const getHotelBySlug = (slug) => axios.get(`${BASE_URL}/hotels/${slug}`);
+
+export { getHotels, getHotelBySlug };

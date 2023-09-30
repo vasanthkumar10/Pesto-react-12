@@ -8,13 +8,26 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
+import React, { useState } from "react";
 
-import React from "react";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { useNavigate } from "react-router-dom";
 
-export function Navbar() {
+export function Navbar({ hotels = [], setHotels, search = true }) {
   const navigate = useNavigate();
+  const [searchValue, setSearchvalue] = useState("");
+
+  const handleSearch = () => {
+    console.log(hotels);
+    const filteredHotels = hotels.filter(
+      (hotel) =>
+        hotel.name.toLowerCase().includes(searchValue.toLocaleLowerCase()) ||
+        hotel.address.toLowerCase().includes(searchValue.toLocaleLowerCase())
+    );
+    console.log("filtered hotels", filteredHotels);
+    setHotels(filteredHotels);
+  };
+
   return (
     <>
       <AppBar position="static" color="inherit">
@@ -39,18 +52,24 @@ export function Navbar() {
               BookStay
             </Typography>
             <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
-              <TextField
-                variant="outlined"
-                label="Search hotels"
-                size="small"
-                InputProps={{
-                  endAdornment: (
-                    <IconButton>
-                      <SearchOutlinedIcon />
-                    </IconButton>
-                  ),
-                }}
-              />
+              {search && (
+                <TextField
+                  value={searchValue}
+                  onChange={(e) => {
+                    setSearchvalue(e.target.value);
+                  }}
+                  variant="outlined"
+                  label="Search hotels"
+                  size="small"
+                  InputProps={{
+                    endAdornment: (
+                      <IconButton onClick={handleSearch}>
+                        <SearchOutlinedIcon />
+                      </IconButton>
+                    ),
+                  }}
+                />
+              )}
               <Typography
                 sx={{
                   cursor: "pointer",
