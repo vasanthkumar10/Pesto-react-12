@@ -1,12 +1,14 @@
-import React, { useState, createContext } from "react";
-import { ComponentA } from "./components/ComponentA";
-import { ComponentD } from "./components/ComponentD";
-import { BorderWrapper } from "./components/BorderWrapper";
-import { Counter } from "./components/Counter";
-import { Counter2 } from "./components/Counter2";
+import React, { createContext, useState } from "react";
+
 import { Axiosdemo } from "./components/Axiosdemo";
-import { FocusInput } from "./components/FocusInput";
-import { ScrollDemo } from "./components/ScrollDemo";
+
+// import { BorderWrapper } from "./components/BorderWrapper";
+// import { ComponentA } from "./components/ComponentA";
+// import { ComponentD } from "./components/ComponentD";
+// import { Counter } from "./components/Counter";
+// import { Counter2 } from "./components/Counter2";
+// import { FocusInput } from "./components/FocusInput";
+// import { ScrollDemo } from "./components/ScrollDemo";
 
 // global
 export const CartContext = createContext();
@@ -42,9 +44,9 @@ function App() {
 
         {/* <Counter />
         <Counter2 /> */}
-        {/* <Axiosdemo /> */}
+        <Axiosdemo />
         {/* <FocusInput /> */}
-        <ScrollDemo />
+        {/* <ScrollDemo /> */}
       </div>
     </CartContext.Provider>
   );

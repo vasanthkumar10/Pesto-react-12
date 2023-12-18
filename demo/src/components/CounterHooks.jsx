@@ -6,45 +6,45 @@ export function CounterHooks({ count, setCount }) {
   // let [count, setCount] = useState(10);
   const [userInput, setUserInput] = useState(1);
 
-  // const handleIncrement = (step = 1) => {
-  // async process
-  // setCount(count + userInput);
-  // setCount(function (prevCount) {
-  //   console.log("prev count", prevCount);
-  //   return prevCount + 1;
-  // });
-  // setCount(function (prevCount) {
-  //   console.log("prev count", prevCount);
-  //   return prevCount + 1;
-  // });
-  // setCount(function (prevCount) {
-  //   console.log("prev count", prevCount);
-  //   return prevCount + 1;
-  // });
-  // setCount(function (prevCount) {
-  //   console.log("prev count", prevCount);
-  //   return prevCount + 1;
-  // });
-  // setCount(function (prevCount) {
-  //   console.log("prev count", prevCount);
-  //   return prevCount + 1;
-  // });
+  const handleIncrement = (step = 1) => {
+    // async process
+    // setCount(count + userInput);
+    setCount(function (prevCount) {
+      console.log("prev count", prevCount);
+      return prevCount + 1;
+    });
+    setCount(function (prevCount) {
+      console.log("prev count", prevCount);
+      return prevCount + 1;
+    });
+    setCount(function (prevCount) {
+      console.log("prev count", prevCount);
+      return prevCount + 1;
+    });
+    setCount(function (prevCount) {
+      console.log("prev count", prevCount);
+      return prevCount + 1;
+    });
+    setCount(function (prevCount) {
+      console.log("prev count", prevCount);
+      return prevCount + 1;
+    });
 
-  // setCount((prevCount) => prevCount + 1);
-  // setCount((prevCount) => prevCount + 1);
-  // setCount(count + 1);
-  // setCount((prevCount) => prevCount + 1);
-  //   setCount((prevCount) => prevCount + 1);
+    // setCount((prevCount) => prevCount + 1);
+    // setCount((prevCount) => prevCount + 1);
+    // setCount(count + 1);
+    // setCount((prevCount) => prevCount + 1);
+    // setCount((prevCount) => prevCount + 1);
 
-  //   console.log("count", count);
-  // };
+    console.log("count", count);
+  };
 
   const handleDecrement = (step = 1) => {
     setCount(count - step);
   };
-  const handleIncrement = (step = 1) => {
-    setCount(count + step);
-  };
+  // const handleIncrement = (step = 1) => {
+  //   setCount(count + step);
+  // };
   return (
     <div>
       <h1>Hooks Counter - {count}</h1>

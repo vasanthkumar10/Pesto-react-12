@@ -34,14 +34,14 @@ describe("Counter component", () => {
     expect(countElement).toHaveTextContent("0");
   });
 
-  test("render 1 after clicking increment button", async () => {
+  test("render 1 after clicking increment button", () => {
     console.log("test case 3");
     render(<Counter />);
     const buttonElement = screen.getByRole("button", {
       name: "increment",
     });
-    await user.click(buttonElement);
-    await user.click(buttonElement);
+    user.click(buttonElement);
+    user.click(buttonElement);
 
     const countElement = screen.getByRole("heading");
     expect(countElement).toHaveTextContent("2");

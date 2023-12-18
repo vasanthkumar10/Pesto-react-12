@@ -1,9 +1,9 @@
-import React from "react";
-import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 
+import { About } from "./components/About";
 import { Home } from "./components/Home";
 import { Profile } from "./components/Profile";
-import { About } from "./components/About";
+import React from "react";
 
 function App() {
   return (
@@ -15,9 +15,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="*" element={<h3>Page not found</h3>} />
 
-        {/* <Route path="/admin" element={<h1>Admin page</h1>} />
+        <Route path="/admin" element={<h1>Admin page</h1>} />
         <Route path="/admin/login" element={<h1>Admin login page</h1>} />
-      <Route path="/admin/signup" element={<h1>Admin signup page</h1>} /> */}
+        <Route path="/admin/signup" element={<h1>Admin signup page</h1>} />
 
         <Route path="/admin">
           <Route index element={<h1>Admin page</h1>} />

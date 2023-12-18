@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 export function Counter2() {
   const [count, setCount] = useState(10);
@@ -36,7 +36,7 @@ export function Counter2() {
         The value of count is {count} and factorial is {getFactorial}
       </h1>
       <button onClick={handleIncrement}>incrementing count by 1</button>
-      <button onClick={handleDecrement}>incrementing count by 1</button>
+      <button onClick={handleDecrement}>decrementing count by 1</button>
 
       <h2>age - {age}</h2>
       <button onClick={() => setAge((prev) => prev + 1)}>increment age</button>
